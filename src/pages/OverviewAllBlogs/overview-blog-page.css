@@ -1,0 +1,20 @@
+.blog-detail-link {
+    color: white;
+}
+
+.blog-detail-link:active {
+    color: white;
+    text-decoration: none;
+}
+
+.overview-blog-list li{
+    margin: 1rem;
+}
+
+.blog-overview-container {
+    border: 1px solid white;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
