@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.details-input-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    justify-content: center;
+}
+
+.input-label{
+    width: 200px;
+}
