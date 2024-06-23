@@ -1,0 +1,4 @@
+.not-found-message {
+    color: var(--color-primary);
+    font-size: 10em;
+}
