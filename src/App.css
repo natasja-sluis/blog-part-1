@@ -14,3 +14,11 @@
 .page-container img {
     width: 500px;
 }
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}

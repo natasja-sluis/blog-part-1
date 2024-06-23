@@ -1,0 +1,20 @@
+.blog-detail-link {
+    color: var(--color-primary);
+}
+
+.blog-detail-link:active {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.blog-overview-container {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.overview-blog-list li{
+     margin: 1rem;
+     border-bottom: 1px solid var(--color-secondary);
+ }
