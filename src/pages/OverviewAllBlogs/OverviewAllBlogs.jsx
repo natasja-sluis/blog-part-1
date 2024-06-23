@@ -1,8 +1,30 @@
-import posts from '/src/constants/data.json';
 import "./overview-blog-page.css"
 import {Link} from "react-router-dom";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 function OverviewAllBlogs() {
+
+    const [posts, setPosts] = useState([]);
+    const [loaded, toggleLoaded] = useState(false);
+    const [error, toggleError] = useState(false);
+
+
+    useEffect(() => {
+        const getPosts = async () => {
+            toggleError(false);
+            toggleLoaded(false);
+            try {
+                const response = await axios.get("http://localhost:3000/posts");
+                setPosts(response.data);
+                toggleLoaded(true);
+            } catch(error) {
+                console.log(error);
+                toggleError(true);
+            }
+        }
+        getPosts();
+    }, []);
 
     return (
         <>
@@ -10,7 +32,7 @@ function OverviewAllBlogs() {
                 <div className="inner-content-container">
                     <h1>Bekijk alle {posts.length} posts op het platform</h1>
                     <ul className="overview-blog-list">
-                        {posts.map((post) => (
+                        {loaded && posts.map((post) => (
                             <li key={post.id}>
                                 <div className="blog-overview-container">
                                     <div className="information-container">
@@ -24,6 +46,7 @@ function OverviewAllBlogs() {
                             </li>
                         ))}
                     </ul>
+                    {error && <p className="error-message">Sorry, er is iets misgegaan</p>}
                 </div>
 
             </section>
