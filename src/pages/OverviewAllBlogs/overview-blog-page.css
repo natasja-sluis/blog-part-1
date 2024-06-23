@@ -18,3 +18,8 @@
      margin: 1rem;
      border-bottom: 1px solid var(--color-secondary);
  }
+
+.error-message {
+    color: red;
+    font-size: 2rem;
+}
