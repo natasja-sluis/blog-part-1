@@ -95,6 +95,13 @@ button {
   display: inline;
 }
 
+
+.error-message {
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+}
+
 /*----------- INNER- EN OUTER CONTAINERS ------------------- */
 
 .outer-content-container {

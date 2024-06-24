@@ -9,14 +9,12 @@ function BlogDetail() {
 
     return (
         <>
-            <section className="blog-detail-section">
-                <div className="inner-content-container">
+            <section className="inner-content-container__text-restriction">
                     <h1>{post.title}</h1>
                     <h2>{post.subtitle}</h2>
                     <p>Geschreven door {post.author} op {formatDate(post.created)}</p>
                     <p>{post.content}</p>
                     <p>{post.comments} reacties - {post.shares} keer gedeeld</p>
-                </div>
                 <Link to="/posts" className="back-link">Terug naar de overzichtspagina</Link>
             </section>
 
